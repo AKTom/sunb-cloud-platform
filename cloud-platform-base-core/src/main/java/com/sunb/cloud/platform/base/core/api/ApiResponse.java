@@ -5,13 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * Author:      赵贺
- * Mail:        zhaohe@sudiyi.cn
- * Date:        14:32 12/12/2017
- * Version:     1.0
- * Description: API响应内容
- */
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
