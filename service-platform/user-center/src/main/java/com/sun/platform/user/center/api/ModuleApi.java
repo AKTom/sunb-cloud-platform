@@ -12,6 +12,7 @@ import java.util.List;
 
 @FeignClient(value = Constants.MODEL_SERVICE, path = "module")
 public interface ModuleApi {
+
     @RequestMapping(value = "list", method = RequestMethod.POST)
     List<ModuleEntity> query(@RequestBody(required = false) ModuleVo moduleVo);
 }

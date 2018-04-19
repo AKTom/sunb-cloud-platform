@@ -1,22 +1,21 @@
 spring:
     application:
-        name: module-center
+        name: api-keeper
     profiles:
         active: default
     cloud:
         config:
-            name: datasource
+            name: datasource,${spring.application.name}-application
             profile: ${spring.profiles.active}
             label: ${COFNIG_BRANCH:master}
             discovery:
                 enabled: true
                 service-id: platform-config-center
+
 server:
-    port: 9100
+    port: 9000
 
 eureka:
-    instance:
-        prefer-ip-address: true
     client:
         serviceUrl:
             defaultZone: ${REGISTRY_CENTER_URI:http://localhost:9020/eureka/}
