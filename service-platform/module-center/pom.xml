@@ -64,28 +64,28 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
-            <plugin>
-                <groupId>com.spotify</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <version>0.4.14</version>
+            <!--<plugin>-->
+                <!--<groupId>com.spotify</groupId>-->
+                <!--<artifactId>docker-maven-plugin</artifactId>-->
+                <!--<version>0.4.14</version>-->
 
-                <configuration>
-                    <imageName>${docker.repository}/${docker.image.platform.prefix}/${project.artifactId}:${project.version}</imageName>
-                    <dockerDirectory>${project.basedir}</dockerDirectory>
-                    <forceTags>true</forceTags>
-                    <pushImage>true</pushImage>
-                    <resources>
-                        <resource>
-                            <targetPath>/</targetPath>
-                            <directory>${project.build.directory}</directory>
-                            <include>${project.build.finalName}.jar</include>
-                        </resource>
-                    </resources>
-                    <serverId>docker-hub</serverId>
-                    <registryUrl>${docker.repository}</registryUrl>
-                </configuration>
+                <!--<configuration>-->
+                    <!--<imageName>${docker.repository}/${docker.image.platform.prefix}/${project.artifactId}:${project.version}</imageName>-->
+                    <!--<dockerDirectory>${project.basedir}</dockerDirectory>-->
+                    <!--<forceTags>true</forceTags>-->
+                    <!--<pushImage>true</pushImage>-->
+                    <!--<resources>-->
+                        <!--<resource>-->
+                            <!--<targetPath>/</targetPath>-->
+                            <!--<directory>${project.build.directory}</directory>-->
+                            <!--<include>${project.build.finalName}.jar</include>-->
+                        <!--</resource>-->
+                    <!--</resources>-->
+                    <!--<serverId>docker-hub</serverId>-->
+                    <!--<registryUrl>${docker.repository}</registryUrl>-->
+                <!--</configuration>-->
 
-            </plugin>
+            <!--</plugin>-->
 
         </plugins>
     </build>

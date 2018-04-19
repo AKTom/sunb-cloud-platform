@@ -10,7 +10,7 @@ spring:
             label: ${COFNIG_BRANCH:master}
             discovery:
                 enabled: true
-                service-id: platform-config-center
+                service-id: config-center
 
 server:
     port: 9000

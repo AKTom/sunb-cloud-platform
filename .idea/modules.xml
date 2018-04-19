@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/service-platform/api-keeper/api-keeper.iml" filepath="$PROJECT_DIR$/service-platform/api-keeper/api-keeper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-platform/cloud-platform.iml" filepath="$PROJECT_DIR$/cloud-platform/cloud-platform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-platform-parent/cloud-platform-parent.iml" filepath="$PROJECT_DIR$/cloud-platform-parent/cloud-platform-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-platform/config-center/config-center.iml" filepath="$PROJECT_DIR$/cloud-platform/config-center/config-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-platform/module-center/module-center.iml" filepath="$PROJECT_DIR$/service-platform/module-center/module-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-platform/registry-center/registry-center.iml" filepath="$PROJECT_DIR$/cloud-platform/registry-center/registry-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-platform/service-platform.iml" filepath="$PROJECT_DIR$/service-platform/service-platform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sunb-cloud-platform.iml" filepath="$PROJECT_DIR$/sunb-cloud-platform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-platform/user-center/user-center.iml" filepath="$PROJECT_DIR$/service-platform/user-center/user-center.iml" />
+    </modules>
+  </component>
+</project>
