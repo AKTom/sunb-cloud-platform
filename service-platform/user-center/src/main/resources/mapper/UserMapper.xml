@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+
+<mapper namespace="com.sun.platform.user.center.dao.UserDao">
+
+    <resultMap id="BaseResultMap" type="com.sun.platform.user.center.entity.UserEntity">
+            <id column="id" property="id" jdbcType="BIGINT"/>
+            <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+            <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+            <result column="status" property="status" jdbcType="TINYINT"/>
+            <result column="type" property="type" jdbcType="BIT"/>
+            <result column="app_id" property="appId" jdbcType="VARCHAR"/>
+            <result column="username" property="username" jdbcType="VARCHAR"/>
+            <result column="password" property="password" jdbcType="VARCHAR"/>
+            <result column="email" property="email" jdbcType="VARCHAR"/>
+            <result column="phone" property="phone" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!-- 基础列 -->
+    <sql id="_base_column">
+         id, create_time, update_time, status, type, app_id, username, password, email, phone
+    </sql>
+
+    <!-- 查找条件SQL片段 -->
+    <sql id="_find_condition">
+        <where>
+            <if test="id != null">
+                AND id = #{id}
+            </if>
+            <if test="createTime != null">
+                AND create_time = #{createTime}
+            </if>
+            <if test="updateTime != null">
+                AND update_time = #{updateTime}
+            </if>
+            <if test="status != null">
+                AND status = #{status}
+            </if>
+            <if test="type != null">
+                AND type = #{type}
+            </if>
+            <if test="appId != null">
+                AND app_id = #{appId}
+            </if>
+            <if test="username != null">
+                AND username = #{username}
+            </if>
+            <if test="password != null">
+                AND password = #{password}
+            </if>
+            <if test="email != null">
+                AND email = #{email}
+            </if>
+            <if test="phone != null">
+                AND phone = #{phone}
+            </if>
+        </where>
+    </sql>
+
+
+    <!-- 分页查找条件SQL片段 -->
+    <sql id="_find_page_condition">
+        <where>
+            <if test="query != null">
+                    <if test="query.id != null">
+                     AND id = #{query.id}
+                </if>
+                <if test="query.createTime != null">
+                     AND create_time = #{query.createTime}
+                </if>
+                <if test="query.updateTime != null">
+                     AND update_time = #{query.updateTime}
+                </if>
+                <if test="query.status != null">
+                     AND status = #{query.status}
+                </if>
+                <if test="query.type != null">
+                     AND type = #{query.type}
+                </if>
+                <if test="query.appId != null">
+                     AND app_id = #{query.appId}
+                </if>
+                <if test="query.username != null">
+                     AND username = #{query.username}
+                </if>
+                <if test="query.password != null">
+                     AND password = #{query.password}
+                </if>
+                <if test="query.email != null">
+                     AND email = #{query.email}
+                </if>
+                <if test="query.phone != null">
+                     AND phone = #{query.phone}
+                </if>
+            </if>
+        </where>
+    </sql>
+
+    <!-- 保存 -->
+    <insert id="save" parameterType="com.sun.platform.user.center.entity.UserEntity" useGeneratedKeys="true" keyProperty="id" >
+
+        insert into sys_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="createTime != null">
+                create_time,
+            </if>
+           <if test="updateTime != null">
+                update_time,
+            </if>
+           <if test="status != null">
+                status,
+            </if>
+           <if test="type != null">
+                type,
+            </if>
+           <if test="appId != null">
+                app_id,
+            </if>
+           <if test="username != null">
+                username,
+            </if>
+           <if test="password != null">
+                password,
+            </if>
+           <if test="email != null">
+                email,
+            </if>
+           <if test="phone != null">
+                phone,
+            </if>
+    
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="createTime != null">
+                #{createTime},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime},
+            </if>
+            <if test="status != null">
+                #{status},
+            </if>
+            <if test="type != null">
+                #{type},
+            </if>
+            <if test="appId != null">
+                #{appId},
+            </if>
+            <if test="username != null">
+                #{username},
+            </if>
+            <if test="password != null">
+                #{password},
+            </if>
+            <if test="email != null">
+                #{email},
+            </if>
+            <if test="phone != null">
+                #{phone},
+            </if>
+        </trim>
+
+    </insert>
+
+
+    <!-- 删除 -->
+    <delete id="delete" parameterType="java.lang.Long">
+
+        delete from sys_user
+        where id = #{id, jdbcType=BIGINT}
+
+    </delete>
+
+
+    <!-- 更新 -->
+    <update id="update" parameterType="com.sun.platform.user.center.entity.UserEntity">
+
+        update sys_user
+        <set>
+            <if test="createTime != null">
+                create_time = #{createTime, jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime, jdbcType=TIMESTAMP},
+            </if>
+            <if test="status != null">
+                status = #{status, jdbcType=TINYINT},
+            </if>
+            <if test="type != null">
+                type = #{type, jdbcType=BIT},
+            </if>
+            <if test="appId != null">
+                app_id = #{appId, jdbcType=VARCHAR},
+            </if>
+            <if test="username != null">
+                username = #{username, jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                password = #{password, jdbcType=VARCHAR},
+            </if>
+            <if test="email != null">
+                email = #{email, jdbcType=VARCHAR},
+            </if>
+            <if test="phone != null">
+                phone = #{phone, jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id, jdbcType=BIGINT}
+
+    </update>
+
+
+    <!-- 按主键查询 -->
+    <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+
+        select
+        <include refid="_base_column"/>
+        from sys_user
+        where id = #{id, jdbcType=BIGINT}
+
+    </select>
+
+
+    <!-- 按主键查询 -->
+    <select id="findById" resultMap="BaseResultMap" >
+
+        select
+        <include refid="_base_column"/>
+        from sys_user
+    </select>
+</mapper>

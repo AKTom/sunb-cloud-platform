@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+
+<mapper namespace="com.sun.platform.module.center.dao.ModuleDao">
+
+    <resultMap id="BaseResultMap" type="com.sun.platform.module.center.entity.ModuleEntity">
+            <id column="id" property="id" jdbcType="BIGINT"/>
+            <result column="module_name" property="moduleName" jdbcType="VARCHAR"/>
+            <result column="module_code" property="moduleCode" jdbcType="VARCHAR"/>
+            <result column="remark" property="remark" jdbcType="VARCHAR"/>
+            <result column="status" property="status" jdbcType="INTEGER"/>
+            <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+            <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!-- 基础列 -->
+    <sql id="_base_column">
+         id, module_name, module_code, remark, status, create_time, update_time
+    </sql>
+
+    <!-- 查找条件SQL片段 -->
+    <sql id="_find_condition">
+        <where>
+            <if test="id != null">
+                AND id = #{id}
+            </if>
+            <if test="moduleName != null">
+                AND module_name = #{moduleName}
+            </if>
+            <if test="moduleCode != null">
+                AND module_code = #{moduleCode}
+            </if>
+            <if test="remark != null">
+                AND remark = #{remark}
+            </if>
+            <if test="status != null">
+                AND status = #{status}
+            </if>
+            <if test="createTime != null">
+                AND create_time = #{createTime}
+            </if>
+            <if test="updateTime != null">
+                AND update_time = #{updateTime}
+            </if>
+        </where>
+    </sql>
+
+
+    <!-- 分页查找条件SQL片段 -->
+    <sql id="_find_page_condition">
+        <where>
+            <if test="query != null">
+                    <if test="query.id != null">
+                     AND id = #{query.id}
+                </if>
+                <if test="query.moduleName != null">
+                     AND module_name = #{query.moduleName}
+                </if>
+                <if test="query.moduleCode != null">
+                     AND module_code = #{query.moduleCode}
+                </if>
+                <if test="query.remark != null">
+                     AND remark = #{query.remark}
+                </if>
+                <if test="query.status != null">
+                     AND status = #{query.status}
+                </if>
+                <if test="query.createTime != null">
+                     AND create_time = #{query.createTime}
+                </if>
+                <if test="query.updateTime != null">
+                     AND update_time = #{query.updateTime}
+                </if>
+            </if>
+        </where>
+    </sql>
+
+    <!-- 保存 -->
+    <insert id="save" parameterType="com.sun.platform.module.center.entity.ModuleEntity" useGeneratedKeys="true" keyProperty="id" >
+
+        insert into sys_module
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="moduleName != null">
+                module_name,
+            </if>
+           <if test="moduleCode != null">
+                module_code,
+            </if>
+           <if test="remark != null">
+                remark,
+            </if>
+           <if test="status != null">
+                status,
+            </if>
+           <if test="createTime != null">
+                create_time,
+            </if>
+           <if test="updateTime != null">
+                update_time,
+            </if>
+    
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="moduleName != null">
+                #{moduleName},
+            </if>
+            <if test="moduleCode != null">
+                #{moduleCode},
+            </if>
+            <if test="remark != null">
+                #{remark},
+            </if>
+            <if test="status != null">
+                #{status},
+            </if>
+            <if test="createTime != null">
+                #{createTime},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime},
+            </if>
+        </trim>
+
+    </insert>
+
+
+    <!-- 删除 -->
+    <delete id="delete" parameterType="java.lang.Long">
+
+        delete from sys_module
+        where id = #{id, jdbcType=BIGINT}
+
+    </delete>
+
+
+    <!-- 更新 -->
+    <update id="update" parameterType="com.sun.platform.module.center.entity.ModuleEntity">
+
+        update sys_module
+        <set>
+            <if test="moduleName != null">
+                module_name = #{moduleName, jdbcType=VARCHAR},
+            </if>
+            <if test="moduleCode != null">
+                module_code = #{moduleCode, jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null">
+                remark = #{remark, jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                status = #{status, jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime, jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime, jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where id = #{id, jdbcType=BIGINT}
+
+    </update>
+
+
+    <!-- 按主键查询 -->
+    <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+
+        select
+        <include refid="_base_column"/>
+        from sys_module
+        where id = #{id, jdbcType=BIGINT}
+
+    </select>
+
+
+    <!-- 按条件查找 -->
+    <select id="findByParam" resultMap="BaseResultMap" parameterType="com.sun.platform.module.center.entity.ModuleEntity">
+
+        select
+            <include refid="_base_column"/>
+        from sys_module
+            <include refid="_find_condition"/>
+
+    </select>
+
+
+
+    <!-- 按条件查找 -->
+    <select id="find" resultMap="BaseResultMap">
+
+        select
+        <include refid="_base_column"/>
+        from sys_module
+    </select>
+
+</mapper>
