@@ -5,5 +5,5 @@ import com.sun.platform.module.center.entity.ModuleEntity;
 import java.util.List;
 
 public interface ModuleDao {
-    public List<ModuleEntity> find();
+    List<ModuleEntity> find();
 }
