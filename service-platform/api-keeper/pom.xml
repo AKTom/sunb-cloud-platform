@@ -54,7 +54,7 @@
         </dependency>
 
         <dependency>
-            <groupId>com.sudiyi.cloud</groupId>
+            <groupId>com.sunb.cloud</groupId>
             <artifactId>cloud-platform-base-core</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
@@ -64,11 +64,6 @@
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
-        </dependency>
-
 
         <!--<dependency>-->
         <!--<groupId>org.springframework.cloud</groupId>-->
@@ -76,8 +71,8 @@
         <!--</dependency>-->
 
         <dependency>
-            <groupId>com.sudiyi.cloud</groupId>
-            <artifactId>cloud-platform-service-framework</artifactId>
+            <groupId>com.sunb.cloud</groupId>
+            <artifactId>service-framework</artifactId>
             <version>1.0-SNAPSHOT</version>
             <exclusions>
                 <exclusion>

@@ -5,14 +5,14 @@ spring:
         active: default
     cloud:
         config:
-            name: datasource
+            name: datasource,${spring.application.name},${spring.application.name}-bootstrap,${spring.application.name}-application
             profile: ${spring.profiles.active}
             label: ${COFNIG_BRANCH:master}
             discovery:
                 enabled: true
                 service-id: config-center
 server:
-    port: 9100
+    port: 9101
 
 eureka:
     instance:

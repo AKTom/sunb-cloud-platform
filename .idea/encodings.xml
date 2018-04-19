@@ -3,9 +3,11 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-platform" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-platform-base-core" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-platform-parent" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-platform/config-center" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-platform/registry-center" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-framework" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-platform" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-platform/api-keeper" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-platform/module-center" charset="UTF-8" />

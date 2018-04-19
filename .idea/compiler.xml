@@ -17,9 +17,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api-keeper" />
+        <module name="cloud-platform-base-core" />
         <module name="config-center" />
         <module name="module-center" />
         <module name="registry-center" />
+        <module name="service-framework" />
         <module name="service-platform" />
         <module name="user-center" />
       </profile>
@@ -27,10 +29,12 @@
     <bytecodeTargetLevel>
       <module name="api-keeper" target="1.8" />
       <module name="cloud-platform" target="1.8" />
+      <module name="cloud-platform-base-core" target="1.8" />
       <module name="cloud-platform-parent" target="1.8" />
       <module name="config-center" target="1.8" />
       <module name="module-center" target="1.8" />
       <module name="registry-center" target="1.8" />
+      <module name="service-framework" target="1.8" />
       <module name="service-platform" target="1.8" />
       <module name="sunb-cloud-platform" target="1.5" />
       <module name="user-center" target="1.8" />

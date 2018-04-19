@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
 
-<mapper namespace="com.sun.platform.user.center.dao.UserDao">
+<mapper namespace="com.sunb.platform.user.center.dao.UserDao">
 
-    <resultMap id="BaseResultMap" type="com.sun.platform.user.center.entity.UserEntity">
+    <resultMap id="BaseResultMap" type="com.sunb.platform.user.center.entity.UserEntity">
             <id column="id" property="id" jdbcType="BIGINT"/>
             <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
             <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
@@ -98,7 +98,7 @@
     </sql>
 
     <!-- 保存 -->
-    <insert id="save" parameterType="com.sun.platform.user.center.entity.UserEntity" useGeneratedKeys="true" keyProperty="id" >
+    <insert id="save" parameterType="com.sunb.platform.user.center.entity.UserEntity" useGeneratedKeys="true" keyProperty="id" >
 
         insert into sys_user
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -174,7 +174,7 @@
 
 
     <!-- 更新 -->
-    <update id="update" parameterType="com.sun.platform.user.center.entity.UserEntity">
+    <update id="update" parameterType="com.sunb.platform.user.center.entity.UserEntity">
 
         update sys_user
         <set>
@@ -221,12 +221,4 @@
 
     </select>
 
-
-    <!-- 按主键查询 -->
-    <select id="findById" resultMap="BaseResultMap" >
-
-        select
-        <include refid="_base_column"/>
-        from sys_user
-    </select>
 </mapper>

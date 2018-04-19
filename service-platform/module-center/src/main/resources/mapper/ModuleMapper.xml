@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
 
-<mapper namespace="com.sun.platform.module.center.dao.ModuleDao">
+<mapper namespace="com.sunb.platform.module.center.dao.ModuleDao">
 
-    <resultMap id="BaseResultMap" type="com.sun.platform.module.center.entity.ModuleEntity">
+    <resultMap id="BaseResultMap" type="com.sunb.platform.module.center.entity.ModuleEntity">
             <id column="id" property="id" jdbcType="BIGINT"/>
             <result column="module_name" property="moduleName" jdbcType="VARCHAR"/>
             <result column="module_code" property="moduleCode" jdbcType="VARCHAR"/>
@@ -77,7 +77,7 @@
     </sql>
 
     <!-- 保存 -->
-    <insert id="save" parameterType="com.sun.platform.module.center.entity.ModuleEntity" useGeneratedKeys="true" keyProperty="id" >
+    <insert id="save" parameterType="com.sunb.platform.module.center.entity.ModuleEntity" useGeneratedKeys="true" keyProperty="id" >
 
         insert into sys_module
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -135,7 +135,7 @@
 
 
     <!-- 更新 -->
-    <update id="update" parameterType="com.sun.platform.module.center.entity.ModuleEntity">
+    <update id="update" parameterType="com.sunb.platform.module.center.entity.ModuleEntity">
 
         update sys_module
         <set>
@@ -175,7 +175,7 @@
 
 
     <!-- 按条件查找 -->
-    <select id="findByParam" resultMap="BaseResultMap" parameterType="com.sun.platform.module.center.entity.ModuleEntity">
+    <select id="findByParam" resultMap="BaseResultMap" parameterType="com.sunb.platform.module.center.entity.ModuleEntity">
 
         select
             <include refid="_base_column"/>
