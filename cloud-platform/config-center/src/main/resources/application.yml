@@ -1,6 +1,6 @@
 spring:
     application:
-        name: platform-config-center
+        name: config-center
     cloud:
         bus:
             trace:
