@@ -1,4 +1,4 @@
-package com.sunb.platform.api.kipper.provider;
+package com.sunb.platform.api.keeper.provider;
 
 import com.alibaba.fastjson.JSON;
 import com.netflix.hystrix.exception.HystrixTimeoutException;

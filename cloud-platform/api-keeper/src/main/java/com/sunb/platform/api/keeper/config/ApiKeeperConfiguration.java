@@ -1,6 +1,6 @@
-package com.sunb.platform.api.kipper.config;
+package com.sunb.platform.api.keeper.config;
 
-import com.sunb.platform.api.kipper.provider.GlobalFallbackProvider;
+import com.sunb.platform.api.keeper.provider.GlobalFallbackProvider;
 import org.springframework.cloud.netflix.zuul.filters.route.FallbackProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
