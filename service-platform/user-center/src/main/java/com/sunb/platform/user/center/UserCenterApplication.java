@@ -6,9 +6,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 
-@EnableFeignClients("com.sun")
-@ComponentScan(basePackages = "com.sun")
-@MapperScan("com.sun.platform.user.center.dao")
+@EnableFeignClients("com.sunb")
+@ComponentScan(basePackages = "com.sunb")
+@MapperScan("com.sunb.platform.user.center.dao")
 @CloudPlatformServiceApplication
 public class UserCenterApplication {
     public static void main(String [] args){

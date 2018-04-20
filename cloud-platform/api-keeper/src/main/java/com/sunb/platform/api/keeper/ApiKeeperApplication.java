@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 @EnableAutoConfiguration
 @EnableZuulProxy
 @EnableDiscoveryClient
-@ComponentScan(basePackages = "com.sun")
+@ComponentScan(basePackages = "com.sunb")
 @SpringBootApplication
 public class ApiKeeperApplication {
 	public static void main(String[] args) {
