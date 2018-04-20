@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/service-platform/api-keeper/api-keeper.iml" filepath="$PROJECT_DIR$/service-platform/api-keeper/api-keeper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-platform/api-keeper/api-keeper.iml" filepath="$PROJECT_DIR$/cloud-platform/api-keeper/api-keeper.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-platform/cloud-platform.iml" filepath="$PROJECT_DIR$/cloud-platform/cloud-platform.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-platform-base-core/cloud-platform-base-core.iml" filepath="$PROJECT_DIR$/cloud-platform-base-core/cloud-platform-base-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-platform-parent/cloud-platform-parent.iml" filepath="$PROJECT_DIR$/cloud-platform-parent/cloud-platform-parent.iml" />

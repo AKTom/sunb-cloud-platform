@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/service-platform/api-keeper/pom.xml" />
         <option value="$PROJECT_DIR$/service-framework/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-platform-base-core/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-platform/api-keeper/pom.xml" />
       </list>
     </option>
   </component>
